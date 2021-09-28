@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <!-- Font awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="icon"
+      href="https://www.freepnglogos.com/uploads/amazing-instagram-logo-png-image-16.png"
+    />
+    <link rel="stylesheet" href="style.css">
+    <!-- Vue JS CDN -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="mobile.css" />
+  
+  </head>
+  <body class="pb-5">
+    <div id="app">
+      <!-- Header -->
+      <app-header></app-header>
+      <!-- /Header -->
+      <div class="container mt-4 d-flex">
+        <div class="col-md-8">
+          <!-- Stories -->
+          <app-stories :stories="stories"></app-stories>
+
+          <!-- /Stories -->
+
+          <!-- Posts -->
+
+          <app-post :posts="posts"></app-post>
+
+          <!-- /Posts -->
+        </div>
+        <!-- Right side -->
+
+        <div
+          class="col-md-4 d-none d-sm-block"
+          style="position: fixed; margin-left: 630px; width: 350px"
+        >
+          <div class="card bg-transparent border-0 p-3">
+            <div
+              class="
+                card-header
+                bg-transparent
+                border-0
+                p-2
+                d-flex
+                justify-content-between
+                align-items-center
+              "
+            >
+              <div class="avatar-rightside d-flex align-items-center">
+                <img
+                  src="https://yt3.ggpht.com/ytc/AKedOLTsJqgMyeCawXSBJzCEaCAY9G9bpjgUo2sQzAkoiA=s900-c-k-c0x00ffffff-no-rj"
+                  alt=""
+                  class="img-fluid rounded-circle me-3"
+                />
+                <div class="d-flex justify-content-start align-items-center">
+                  <span class="profile-owner-title row"
+                    ><a href="#" class="text-dark"><b>enes.ets34</b></a>
+                    <span class="text-muted">Enes</span></span
+                  >
+                </div>
+              </div>
+              <div>
+                <small
+                  ><a href="#" class="text-primary fs-12">Geçiş Yap</a></small
+                >
+              </div>
+            </div>
+            <div class="mt-1 d-flex justify-content-between align-items-center">
+              <b class="text-muted fs-14"> Senin için önerilenler </b>
+              <b class="fs-12">
+                <small>Tümünü Gör</small>
+              </b>
+            </div>
+            <ul class="list-group mt-2">
+              <li
+                class="
+                  list-group-item
+                  bg-transparent
+                  border-0
+                  mb-2
+                  p-0
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                "
+              >
+                <div class="d-flex align-items-center">
+                  <img
+                    src="https://yt3.ggpht.com/ytc/AKedOLTsJqgMyeCawXSBJzCEaCAY9G9bpjgUo2sQzAkoiA=s900-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                    class="avatar-right rounded-circle me-2"
+                  />
+                  <div class="ms-3">
+                    <a href="#" class="text-dark row fw-bold fs-14"
+                      >enes.ets34</a
+                    >
+                    <small class="fs-12 row text-muted"
+                      >Senin için öneriliyor</small
+                    >
+                  </div>
+                </div>
+                <a href="#" class="text-primary fs-12">Takip et</a>
+              </li>
+              <li
+                class="
+                  list-group-item
+                  bg-transparent
+                  border-0
+                  p-0
+                  mb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                "
+              >
+                <div class="d-flex align-items-center">
+                  <img
+                    src="https://yt3.ggpht.com/ytc/AKedOLTsJqgMyeCawXSBJzCEaCAY9G9bpjgUo2sQzAkoiA=s900-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                    class="avatar-right rounded-circle me-2"
+                  />
+                  <div class="ms-3">
+                    <a href="#" class="text-dark row fw-bold fs-14"
+                      >enes.ets34</a
+                    >
+                    <small class="fs-12 row text-muted"
+                      >Senin için öneriliyor</small
+                    >
+                  </div>
+                </div>
+                <a href="#" class="text-primary fs-12">Takip et</a>
+              </li>
+              <li
+                class="
+                  list-group-item
+                  bg-transparent
+                  border-0
+                  p-0
+                  mb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                "
+              >
+                <div class="d-flex align-items-center">
+                  <img
+                    src="https://yt3.ggpht.com/ytc/AKedOLTsJqgMyeCawXSBJzCEaCAY9G9bpjgUo2sQzAkoiA=s900-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                    class="avatar-right rounded-circle me-2"
+                  />
+                  <div class="ms-3">
+                    <a href="#" class="text-dark row fw-bold fs-14"
+                      >enes.ets34</a
+                    >
+                    <small class="fs-12 row text-muted"
+                      >Senin için öneriliyor</small
+                    >
+                  </div>
+                </div>
+                <a href="#" class="text-primary fs-12">Takip et</a>
+              </li>
+              <li
+                class="
+                  list-group-item
+                  bg-transparent
+                  border-0
+                  p-0
+                  mb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                "
+              >
+                <div class="d-flex align-items-center">
+                  <img
+                    src="https://yt3.ggpht.com/ytc/AKedOLTsJqgMyeCawXSBJzCEaCAY9G9bpjgUo2sQzAkoiA=s900-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                    class="avatar-right rounded-circle me-2"
+                  />
+                  <div class="ms-3">
+                    <a href="#" class="text-dark row fw-bold fs-14"
+                      >enes.ets34</a
+                    >
+                    <small class="fs-12 row text-muted"
+                      >Senin için öneriliyor</small
+                    >
+                  </div>
+                </div>
+                <a href="#" class="text-primary fs-12">Takip et</a>
+              </li>
+              <li
+                class="
+                  list-group-item
+                  bg-transparent
+                  border-0
+                  p-0
+                  mb-2
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                "
+              >
+                <div class="d-flex align-items-center">
+                  <img
+                    src="https://yt3.ggpht.com/ytc/AKedOLTsJqgMyeCawXSBJzCEaCAY9G9bpjgUo2sQzAkoiA=s900-c-k-c0x00ffffff-no-rj"
+                    alt=""
+                    class="avatar-right rounded-circle me-2"
+                  />
+                  <div class="ms-3">
+                    <a href="#" class="text-dark row fw-bold fs-14"
+                      >enes.ets34</a
+                    >
+                    <small class="fs-12 row text-muted"
+                      >Senin için öneriliyor</small
+                    >
+                  </div>
+                </div>
+                <a href="#" class="text-primary fs-12">Takip et</a>
+              </li>
+            </ul>
+            <small style="font-size: 11px" class="text-muted mt-2 fw-lighter"
+              ><i class="far fa-copyright fw-lighter"></i> INSTAGRAM FROM
+              ENES.ETS34</small
+            >
+          </div>
+        </div>
+
+        <!-- /Right side -->
+      </div>
+    </div>
+  </body>
+  <script>
+    const storiesComponent = {
+      props: ["stories"],
+      template: `  <div class="card stories">
+              <div class="d-flex justify-content-start p-3">
+                <div
+                  v-for="story in this.stories"
+                  :key="story"
+                  class="text-center avatar-story mx-1"
+                >
+                  <img
+                    :src="story.avatar"
+                    :alt="story.title"
+                    class="img-fluid avatar-story rounded-circle"
+                  />
+                  <small class="story-owner text-center">{{story.title}}</small>
+                </div>
+              </div>
+            </div>`,
+    };
+    const postComponent = {
+      props: ["posts"],
+      data() {
+        return {
+          userData: {
+            comment: "",
+          },
+        };
+      },
+      computed: {
+        commentLength() {
+          return this.userData.comment.length === 0;
+        },
+      },
+      methods: {
+        addComment(post) {
+          console.log("this.userData :>> ", this.userData);
+        },
+      },
+      created() {
+        console.log("hüloo");
+      },
+      methods: {
+        addComment(post) {
+          post.comments.push({
+            user: "enes.ets34",
+            content: this.userData.comment,
+            isLiked: false,
+          });
+          this.userData.comment = "";
+        },
+      },
+      template: `
+        <div v-for="post in posts" :key="post.id" class="card my-4">
+              <div
+                class="
+                  card-header
+                  bg-white
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                "
+              >
+                <div class="d-flex">
+                  <div class="avatar-post d-flex">
+                    <img
+                      :src="post.user.avatar"
+                      :alt="post.user.title"
+                      class="img-fluid rounded-circle"
+                    />
+                  </div>
+                  <div class="ms-1 align-items-center row">
+                    <b>
+                      <a
+                        class="text-dark text-decoration-none post-owner"
+                        href="#"
+                        >{{post.user.title}}</a
+                      ><small
+                        ><i
+                          v-if="post.user.isVerifiedAccount"
+                          class="ms-1 fas fa-check-circle text-primary"
+                        ></i
+                      ></small>
+                    </b>
+
+                    <small
+                      v-if="post.location!==null"
+                      class="text-dark location"
+                      href="#"
+                      >{{post.location}}</small
+                    >
+                  </div>
+                </div>
+                <svg
+                  aria-label="Diğer seçenekler"
+                  class="_8-yf5"
+                  fill="#262626"
+                  height="16"
+                  role="img"
+                  viewBox="0 0 48 48"
+                  width="16"
+                >
+                  <circle
+                    clip-rule="evenodd"
+                    cx="8"
+                    cy="24"
+                    fill-rule="evenodd"
+                    r="4.5"
+                  ></circle>
+                  <circle
+                    clip-rule="evenodd"
+                    cx="24"
+                    cy="24"
+                    fill-rule="evenodd"
+                    r="4.5"
+                  ></circle>
+                  <circle
+                    clip-rule="evenodd"
+                    cx="40"
+                    cy="24"
+                    fill-rule="evenodd"
+                    r="4.5"
+                  ></circle>
+                </svg>
+              </div>
+              <div class="card-body p-0">
+                <img
+                  :src="post.post"
+                  :alt="post.caption"
+                  class="img-fluid post"
+                />
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items center m-2">
+                    <i
+                      @click="post.isLiked=!post.isLiked"
+                      :class="{'fas text-danger ':post.isLiked}"
+                      class="far fa-heart fs-4 mx-2"
+                    ></i>
+                    <!-- <i class="fas fa-heart fs-4"></i> -->
+                    <svg
+                      aria-label="Yorum Yap"
+                      class="mx-2"
+                      fill="#262626"
+                      height="24"
+                      role="img"
+                      viewBox="0 0 48 48"
+                      width="24"
+                    >
+                      <path
+                        clip-rule="evenodd"
+                        d="M47.5 46.1l-2.8-11c1.8-3.3 2.8-7.1 2.8-11.1C47.5 11 37 .5 24 .5S.5 11 .5 24 11 47.5 24 47.5c4 0 7.8-1 11.1-2.8l11 2.8c.8.2 1.6-.6 1.4-1.4zm-3-22.1c0 4-1 7-2.6 10-.2.4-.3.9-.2 1.4l2.1 8.4-8.3-2.1c-.5-.1-1-.1-1.4.2-1.8 1-5.2 2.6-10 2.6-11.4 0-20.6-9.2-20.6-20.5S12.7 3.5 24 3.5 44.5 12.7 44.5 24z"
+                        fill-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <svg
+                      aria-label="Gönderi Paylaş"
+                      class="mx-2"
+                      fill="#262626"
+                      height="24"
+                      role="img"
+                      viewBox="0 0 48 48"
+                      width="24"
+                    >
+                      <path
+                        d="M47.8 3.8c-.3-.5-.8-.8-1.3-.8h-45C.9 3.1.3 3.5.1 4S0 5.2.4 5.7l15.9 15.6 5.5 22.6c.1.6.6 1 1.2 1.1h.2c.5 0 1-.3 1.3-.7l23.2-39c.4-.4.4-1 .1-1.5zM5.2 6.1h35.5L18 18.7 5.2 6.1zm18.7 33.6l-4.4-18.4L42.4 8.6 23.9 39.7z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <a class="text-dark"
+                    ><i
+                      @click="post.isBookmarked=!post.isBookmarked"
+                      :class="{'fas':post.isBookmarked}"
+                      class="far fa-bookmark fs-24 me-2"
+                    ></i
+                  ></a>
+                </div>
+                <div class="px-3">
+                  <b
+                    ><a href="#" class="likes text-dark"
+                      >{{post.likeCount}} beğenme</a
+                    ></b
+                  >
+
+                  <div class="d-flex align-items-center">
+                    <b
+                      ><a href="#" class="likes text-dark"
+                        >{{post.user.title}}</a
+                      ></b
+                    >
+                    <span class="ms-2 description text-dark"
+                      >{{post.caption}}</span
+                    >
+                  </div>
+                  <div
+                    v-for="comment in post.comments"
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <b
+                        ><a href="#" class="likes text-dark"
+                          >{{comment.user}}</a
+                        ></b
+                      >
+                      <span class="ms-2 description text-dark"
+                        >{{comment.content}}</span
+                      >
+                    </div>
+                    <i
+                      @click="comment.isLiked=!comment.isLiked"
+                      :class="{'fas text-danger ':comment.isLiked}"
+                      class="far fa-heart fs-12"
+                    ></i>
+                  </div>
+                  <small class="text-muted fs-12">14 dakika önce</small>
+                </div>
+              </div>
+              <div
+                class="card-footer d-flex align-items-center mt-2 bg-transparent"
+              >
+                <svg
+                  aria-label="İfade Simgesi"
+                  class="_8-yf5"
+                  color="#262626"
+                  fill="#262626"
+                  height="24"
+                  role="img"
+                  viewBox="0 0 48 48"
+                  width="24"
+                >
+                  <path
+                    d="M24 48C10.8 48 0 37.2 0 24S10.8 0 24 0s24 10.8 24 24-10.8 24-24 24zm0-45C12.4 3 3 12.4 3 24s9.4 21 21 21 21-9.4 21-21S35.6 3 24 3z"
+                  ></path>
+                  <path
+                    d="M34.9 24c0-1.4-1.1-2.5-2.5-2.5s-2.5 1.1-2.5 2.5 1.1 2.5 2.5 2.5 2.5-1.1 2.5-2.5zm-21.8 0c0-1.4 1.1-2.5 2.5-2.5s2.5 1.1 2.5 2.5-1.1 2.5-2.5 2.5-2.5-1.1-2.5-2.5zM24 37.3c-5.2 0-8-3.5-8.2-3.7-.5-.6-.4-1.6.2-2.1.6-.5 1.6-.4 2.1.2.1.1 2.1 2.5 5.8 2.5 3.7 0 5.8-2.5 5.8-2.5.5-.6 1.5-.7 2.1-.2.6.5.7 1.5.2 2.1 0 .2-2.8 3.7-8 3.7z"
+                  ></path>
+                </svg>
+                <input
+                  v-model="userData.comment"
+                  type="text"
+                  placeholder="Yorum ekle..."
+                  class="form-control mx-2 border-0"
+                />
+                <button 
+                @click="addComment(post)"
+                  :disabled="commentLength"
+                  :class="{'fw-lighter':commentLength}"
+                  class="border-0 bg-transparent"
+                >
+                  <small  class="text-primary"
+                    >Paylaş</small
+                  >
+                </button>
+              </div>
+            </div>
+        `,
+    };
+    const headerComponent = {
+      template: `<nav
+        class="
+          navbar navbar-expand-lg navbar-light
+          bg-light
+          border border-bottom
+          sticky-top
+        "
+      >
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><img
+              src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png"
+              alt=""
+              class="img-fluid"
+          /></a>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex ms-auto">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-1">
+                <a class="nav-link" aria-current="page"
+                  ><svg
+                    aria-label="Ana Sayfa"
+                    class="_8-yf5"
+                    fill="#262626"
+                    height="22"
+                    role="img"
+                    viewBox="0 0 48 48"
+                    width="22"
+                  >
+                    <path
+                      d="M45.5 48H30.1c-.8 0-1.5-.7-1.5-1.5V34.2c0-2.6-2.1-4.6-4.6-4.6s-4.6 2.1-4.6 4.6v12.3c0 .8-.7 1.5-1.5 1.5H2.5c-.8 0-1.5-.7-1.5-1.5V23c0-.4.2-.8.4-1.1L22.9.4c.6-.6 1.6-.6 2.1 0l21.5 21.5c.3.3.4.7.4 1.1v23.5c.1.8-.6 1.5-1.4 1.5z"
+                    ></path>
+                  </svg>
+                </a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link" aria-current="page"
+                  ><svg
+                    aria-label="Messenger"
+                    fill="#262626"
+                    height="22"
+                    role="img"
+                    viewBox="0 0 48 48"
+                    width="22"
+                  >
+                    <path
+                      d="M36.2 16.7L29 22.2c-.5.4-1.2.4-1.7 0l-5.4-4c-1.6-1.2-3.9-.8-5 .9l-6.8 10.7c-.7 1 .6 2.2 1.6 1.5l7.3-5.5c.5-.4 1.2-.4 1.7 0l5.4 4c1.6 1.2 3.9.8 5-.9l6.8-10.7c.6-1.1-.7-2.2-1.7-1.5zM24 1C11 1 1 10.5 1 23.3 1 30 3.7 35.8 8.2 39.8c.4.3.6.8.6 1.3l.2 4.1c0 1 .9 1.8 1.8 1.8.2 0 .5 0 .7-.2l4.6-2c.2-.1.5-.2.7-.2.2 0 .3 0 .5.1 2.1.6 4.3.9 6.7.9 13 0 23-9.5 23-22.3S37 1 24 1zm0 41.6c-2 0-4-.3-5.9-.8-.4-.1-.8-.2-1.3-.2-.7 0-1.3.1-2 .4l-3 1.3V41c0-1.3-.6-2.5-1.6-3.4C6.2 34 4 28.9 4 23.3 4 12.3 12.6 4 24 4s20 8.3 20 19.3-8.6 19.3-20 19.3z"
+                    ></path>
+                  </svg>
+                </a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link" aria-current="page"
+                  ><svg
+                    aria-label="Kişiler Bul"
+                    class="_8-yf5"
+                    fill="#262626"
+                    height="22"
+                    role="img"
+                    viewBox="0 0 48 48"
+                    width="22"
+                  >
+                    <path
+                      clip-rule="evenodd"
+                      d="M24 0C10.8 0 0 10.8 0 24s10.8 24 24 24 24-10.8 24-24S37.2 0 24 0zm0 45C12.4 45 3 35.6 3 24S12.4 3 24 3s21 9.4 21 21-9.4 21-21 21zm10.2-33.2l-14.8 7c-.3.1-.6.4-.7.7l-7 14.8c-.3.6-.2 1.3.3 1.7.3.3.7.4 1.1.4.2 0 .4 0 .6-.1l14.8-7c.3-.1.6-.4.7-.7l7-14.8c.3-.6.2-1.3-.3-1.7-.4-.5-1.1-.6-1.7-.3zm-7.4 15l-5.5-5.5 10.5-5-5 10.5z"
+                      fill-rule="evenodd"
+                    ></path>
+                  </svg>
+                </a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link" aria-current="page"
+                  ><svg
+                    aria-label="Hareket Akışı"
+                    class="_8-yf5"
+                    fill="#262626"
+                    height="22"
+                    role="img"
+                    viewBox="0 0 48 48"
+                    width="22"
+                  >
+                    <path
+                      d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"
+                    ></path>
+                  </svg>
+                </a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link" aria-current="page" href="#"
+                  ><img
+                    src="https://media.kommunity.com/avatar/4a8d2c46-ecec-4386-85d3-f18fa176f39e_avatar_5e88a71d3c669.jpg"
+                    alt=""
+                    class="current-user img-fluid rounded-circle"
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>`,
+    };
+    const app = Vue.createApp({
+      components: {
+        appPost: postComponent,
+        appStories: storiesComponent,
+        appHeader: headerComponent,
+      },
+      data() {
+        return {
+          stories: [
+            {
+              title: "enes.ets34",
+              avatar:
+                "https://yt3.ggpht.com/ytc/AKedOLTsJqgMyeCawXSBJzCEaCAY9G9bpjgUo2sQzAkoiA=s900-c-k-c0x00ffffff-no-rj",
+            },
+
+            {
+              title: "beylikdu...",
+              avatar:
+                "https://www.beylikduzu.istanbul/BBImages/Slider/Image/beylikduzu-belediyesi-logo-kullanimi-7-4519.png",
+            },
+            {
+              title: "istanbul...",
+              avatar:
+                "https://pbs.twimg.com/profile_images/1375346172106260480/2AeQRMiq_400x400.jpg",
+            },
+            {
+              title: "ciceksepeti",
+              avatar:
+                "https://www.logowik.com/content/uploads/images/t_cicek-sepeti3297.jpg",
+            },
+            {
+              title: "apple",
+              avatar:
+                "https://media-exp1.licdn.com/dms/image/C560BAQHdAaarsO-eyA/company-logo_200_200/0/1595530301220?e=2159024400&v=beta&t=IJmg_K1W7KCh6082rXN9V7gzlrD9GMwYqk_EjCrDxGw",
+            },
+            {
+              title: "cengizc...",
+              avatar:
+                "https://media.kommunity.com/avatar/_avatar_5f17475759e33.jpg?p=avatar-80",
+            },
+            {
+              title: "kablosuz...",
+              avatar:
+                "https://yt3.ggpht.com/ytc/AKedOLSj2FK7hgQqQZh3yP73icIUBHrElm1blSMpOsHV=s900-c-k-c0x00ffffff-no-rj",
+            },
+            {
+              title: "amazon",
+              avatar:
+                "https://pbs.twimg.com/profile_images/1399841195816144898/J0itvSWJ.jpg",
+            },
+          ],
+          posts: [
+            {
+              id: 1,
+              user: {
+                isVerifiedAccount: false,
+                title: "kablosuzkedi",
+                avatar:
+                  "https://yt3.ggpht.com/ytc/AKedOLSj2FK7hgQqQZh3yP73icIUBHrElm1blSMpOsHV=s900-c-k-c0x00ffffff-no-rj",
+              },
+              post: "https://miro.medium.com/max/691/1*aSoY_-7WQo2-BqyO7ZISAA.png",
+              caption: "Docker ile ilgili video serimizi izleyebilirsiniz...",
+              location: null,
+              likeCount: 154,
+              isBookmarked: false,
+              isLiked: false,
+
+              comments: [
+                {
+                  user: "cengizcmataraci",
+                  content: "eline saglık abi.",
+                  isLiked: false,
+                },
+              ],
+            },
+            {
+              id: 2,
+              user: {
+                isVerifiedAccount: true,
+                title: "apple",
+                avatar:
+                  "https://media-exp1.licdn.com/dms/image/C560BAQHdAaarsO-eyA/company-logo_200_200/0/1595530301220?e=2159024400&v=beta&t=IJmg_K1W7KCh6082rXN9V7gzlrD9GMwYqk_EjCrDxGw",
+              },
+              post: "https://www.cumhuriyet.com.tr/Archive/2021/9/8/1867102/kapak_103604.jpg",
+              caption: "Yeni iPhone'a mağazalarımızdan erişebilirsiniz...",
+              location: "İstanbul",
+              likeCount: 8459,
+              isLiked: false,
+              isBookmarked: false,
+              comments: [],
+            },
+          ],
+        };
+      },
+    });
+    app.mount("#app");
+  </script>
+</html>
