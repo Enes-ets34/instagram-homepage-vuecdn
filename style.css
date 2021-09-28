@@ -1,0 +1,90 @@
+
+.container {
+  width: 60rem;
+}
+.navbar {
+  background-color: rgba(var(--d87, 255, 255, 255), 1) !important;
+}
+input:focus {
+  outline: none !important;
+}
+a {
+  text-decoration: none;
+}
+a.navbar-brand > img {
+  width: 103px;
+  height: 29px;
+}
+.avatar-story {
+  height: 66px !important;
+  width: 66px !important;
+}
+.avatar-story > img {
+  padding: 2px;
+  border: 2px solid #e1306c;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+.avatar-post,
+.avatar-post > img {
+  height: 42px;
+  width: 42px;
+}
+.current-user {
+  height: 22px;
+  width: 22px;
+}
+.avatar-rightside {
+  height: 56px;
+  width: 56px;
+}
+.avatar-right {
+  height: 32px;
+  width: 32px;
+}
+.profile-owner-title {
+  font-size: 14px;
+}
+.avatar-post > img {
+  padding: 2px;
+  border: 2px solid #e1306c;
+}
+.stories {
+  height: 118px;
+  overflow: scroll;
+}
+.story-owner,
+.location {
+  font-size: 12px;
+}
+.fs-12 {
+  font-size: 12px;
+}
+.fs-14 {
+  font-size: 14px;
+}
+.fs-24 {
+  font-size: 24px;
+}
+
+nav {
+  background-color: #ffffff;
+}
+body {
+  background-color: #fafafa;
+}
+.fas,
+.far,
+svg {
+  cursor: pointer;
+}
+.post {
+  height: 614;
+  width: 614;
+}
+.post-owner,
+.likes,
+.description {
+  font-size: 14px;
+}

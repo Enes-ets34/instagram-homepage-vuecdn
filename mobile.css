@@ -1,0 +1,19 @@
+@media only screen and (max-width: 600px) {
+  .container,nav,.col-md-8  {
+    width: 100% !important;
+  }
+  .container{
+    padding: 0 !important;
+  }
+  nav{
+    padding-left:  20px  !important;
+    padding-right:  20px  !important;
+  }
+  .post {
+    width: 375px !important;
+    height: auto !important;
+  }
+  ul.navbar-nav {
+    visibility: visible !important;
+  }
+}
