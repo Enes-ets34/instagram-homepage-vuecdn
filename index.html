@@ -24,11 +24,10 @@
       rel="icon"
       href="https://www.freepnglogos.com/uploads/amazing-instagram-logo-png-image-16.png"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <!-- Vue JS CDN -->
     <script src="https://unpkg.com/vue@next"></script>
     <link rel="stylesheet" href="mobile.css" />
-  
   </head>
   <body class="pb-5">
     <div id="app">
@@ -432,8 +431,13 @@
                     ></b
                   >
 
-                  <div class="d-flex align-items-center">
-                    <b
+              
+                  <div
+
+                    class="d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <b
                       ><a href="#" class="likes text-dark"
                         >{{post.user.title}}</a
                       ></b
@@ -441,6 +445,8 @@
                     <span class="ms-2 description text-dark"
                       >{{post.caption}}</span
                     >
+                    </div>
+                 
                   </div>
                   <div
                     v-for="comment in post.comments"
