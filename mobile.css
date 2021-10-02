@@ -1,13 +1,15 @@
 @media only screen and (max-width: 600px) {
-  .container,nav,.col-md-8  {
+  .container,
+  nav,
+  .col-md-8 {
     width: 100% !important;
   }
-  .container{
+  .container {
     padding: 0 !important;
   }
-  nav{
-    padding-left:  20px  !important;
-    padding-right:  20px  !important;
+  nav {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
   }
   .post {
     width: 375px !important;
@@ -15,5 +17,12 @@
   }
   ul.navbar-nav {
     visibility: visible !important;
+  }
+  .navbar-brand {
+    max-width: 200px !important;
+  }
+
+  .stories,.container {
+    margin: 0 auto 0 auto !important;
   }
 }
