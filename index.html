@@ -206,6 +206,7 @@
                   </div>
                 </div>
                 <a href="#" class="text-primary fs-12">Takip et</a>
+                <i class="far fa-bookmark fs-24 me-2"></i>
               </li>
               <li
                 class="
@@ -262,7 +263,7 @@
                   :src="story.avatar"
                   :alt="story.title"
                   class="avatar-story rounded-circle"
-                />
+                />   
 
                 <small class="story-owner text-center">{{story.title}}</small>
                 <span v-if="story.isLive"
@@ -329,6 +330,7 @@
                 <div class="d-flex">
                   <div class="avatar-post d-flex">
                     <img
+                    
                       :src="post.user.avatar"
                       :alt="post.user.title"
                       class="img-fluid rounded-circle"
@@ -390,6 +392,7 @@
               </div>
               <div class="card-body p-0">
                 <img
+                @dblclick="post.isLiked=true"
                   :src="post.post"
                   :alt="post.caption"
                   class="img-fluid post"
@@ -435,7 +438,7 @@
                     ><i
                       @click="post.isBookmarked=!post.isBookmarked"
                       :class="{'fas':post.isBookmarked}"
-                      class="far fa-bookmark fs-24 me-2"
+                      class="far fa-bookmark fw-light fs-24 me-2"
                     ></i
                   ></a>
                 </div>
