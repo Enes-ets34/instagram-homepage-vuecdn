@@ -206,7 +206,6 @@
                   </div>
                 </div>
                 <a href="#" class="text-primary fs-12">Takip et</a>
-            
               </li>
               <li
                 class="
@@ -255,17 +254,17 @@
       template: `    <div class="card stories">
             <div class="d-flex justify-content-start p-3">
               <div
-                v-for="story in stories"
+                v-for="story in mappedStories"
                 :key="story"
-                class="text-center avatar-story mx-1 position-relative"
+                class="text-center avatar-story mx-2 position-relative"
               >
                 <img
                   :src="story.avatar"
                   :alt="story.title"
                   class="avatar-story rounded-circle"
-                />   
+                />
 
-                <small class="story-owner text-center">{{story.title}}</small>
+                <small class="story-owner text-center text-nowrap">{{story.title}}</small>
                 <span v-if="story.isLive"
                   class="
                     position-absolute
@@ -283,6 +282,25 @@
               </div>
             </div>
           </div>`,
+      computed: {
+        mappedStories() {
+          let mappedStories = this.stories.map((i) => {
+            if (i.title.length > 10) {
+              return {
+                title: i.title.slice(0, 9) + "...",
+                avatar: i.avatar,
+                isLive: i.isLive,
+              };
+            }
+            return {
+              title: i.title,
+              avatar: i.avatar,
+              isLive: i.isLive,
+            };
+          });
+          return mappedStories;
+        },
+      },
     };
     const postComponent = {
       props: ["posts"],
@@ -303,9 +321,7 @@
           console.log("this.userData :>> ", this.userData);
         },
       },
-      created() {
-        console.log("hüloo");
-      },
+
       methods: {
         addComment(post) {
           post.comments.push({
@@ -330,7 +346,7 @@
                 <div class="d-flex">
                   <div class="avatar-post d-flex">
                     <img
-                    
+
                       :src="post.user.avatar"
                       :alt="post.user.title"
                       class="img-fluid rounded-circle"
@@ -437,10 +453,12 @@
                   <a class="text-dark"
                     ><i
                       @click="post.isBookmarked=!post.isBookmarked"
-                      :class="{'fas':post.isBookmarked}"
+                       :class="{'fas':post.isBookmarked}"
                       class="far fa-bookmark fw-light fs-24 me-2"
                     ></i
-                  ></a>
+                  >
+
+                  </a>
                 </div>
                 <div class="px-3">
                   <b
@@ -449,7 +467,7 @@
                     ></b
                   >
 
-              
+
                   <div
 
                     class="d-flex justify-content-between align-items-center"
@@ -464,7 +482,7 @@
                       >{{post.caption}}</span
                     >
                     </div>
-                 
+
                   </div>
                   <div
                     v-for="comment in post.comments"
@@ -515,7 +533,7 @@
                   placeholder="Yorum ekle..."
                   class="form-control mx-2 border-0"
                 />
-                <button 
+                <button
                 @click="addComment(post)"
                   :disabled="commentLength"
                   :class="{'fw-lighter':commentLength}"
@@ -584,11 +602,11 @@
                     viewBox="0 0 48 48"
                     width="22"
                   >
-                 
+
                     <path
                       d="M36.2 16.7L29 22.2c-.5.4-1.2.4-1.7 0l-5.4-4c-1.6-1.2-3.9-.8-5 .9l-6.8 10.7c-.7 1 .6 2.2 1.6 1.5l7.3-5.5c.5-.4 1.2-.4 1.7 0l5.4 4c1.6 1.2 3.9.8 5-.9l6.8-10.7c.6-1.1-.7-2.2-1.7-1.5zM24 1C11 1 1 10.5 1 23.3 1 30 3.7 35.8 8.2 39.8c.4.3.6.8.6 1.3l.2 4.1c0 1 .9 1.8 1.8 1.8.2 0 .5 0 .7-.2l4.6-2c.2-.1.5-.2.7-.2.2 0 .3 0 .5.1 2.1.6 4.3.9 6.7.9 13 0 23-9.5 23-22.3S37 1 24 1zm0 41.6c-2 0-4-.3-5.9-.8-.4-.1-.8-.2-1.3-.2-.7 0-1.3.1-2 .4l-3 1.3V41c0-1.3-.6-2.5-1.6-3.4C6.2 34 4 28.9 4 23.3 4 12.3 12.6 4 24 4s20 8.3 20 19.3-8.6 19.3-20 19.3z"
                     ></path>
-                 
+
                   </svg>
 
                 </a>
@@ -665,12 +683,12 @@
               isLive: true,
             },
             {
-              title: "beylikdu...",
+              title: "beylikduzubelediye",
               avatar:
                 "https://www.beylikduzu.istanbul/BBImages/Slider/Image/beylikduzu-belediyesi-logo-kullanimi-7-4519.png",
             },
             {
-              title: "istanbul...",
+              title: "istanbulbuyuksehirbld",
               avatar:
                 "https://pbs.twimg.com/profile_images/1375346172106260480/2AeQRMiq_400x400.jpg",
               isLive: false,
@@ -683,13 +701,13 @@
             },
 
             {
-              title: "cengizc...",
+              title: "cengizcmataraci",
               avatar:
                 "https://media.kommunity.com/avatar/_avatar_5f17475759e33.jpg?p=avatar-80",
               isLive: false,
             },
             {
-              title: "kablosuz...",
+              title: "kablosuzkedi",
               avatar:
                 "https://yt3.ggpht.com/ytc/AKedOLSj2FK7hgQqQZh3yP73icIUBHrElm1blSMpOsHV=s900-c-k-c0x00ffffff-no-rj",
               isLive: false,
@@ -738,6 +756,7 @@
           ],
         };
       },
+      created() {},
     });
     app.mount("#app");
   </script>
