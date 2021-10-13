@@ -7,10 +7,11 @@
 input:focus {
   outline: none !important;
 }
-.badge{
+.notification {
   border-radius: 100% !important;
-  padding: 2px 3px 2px 3px !important;
+  padding: 2px 3px 3px 3px !important;
   margin-top: 5px !important;
+  font-size: 10px!important;
 }
 a {
   text-decoration: none;
@@ -58,12 +59,11 @@ a.navbar-brand > img {
   overflow: scroll;
 }
 .story-owner,
-.location {
-  font-size: 12px;
-}
+.location,
 .fs-12 {
   font-size: 12px;
 }
+
 .fs-14 {
   font-size: 14px;
 }
@@ -92,12 +92,9 @@ svg {
   font-size: 14px;
 }
 .live {
-  background: linear-gradient(
-145deg,#c40092 0%,#e40031 100%);
+  background: linear-gradient(145deg, #c40092 0%, #e40031 100%);
   font-size: 10px;
   padding: 0 4px 0 4px;
   border-radius: 4px;
   margin-bottom: 20px !important;
-
-
 }
