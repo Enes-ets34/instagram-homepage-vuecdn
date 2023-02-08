@@ -56,7 +56,7 @@ a.navbar-brand > img {
 }
 .stories {
   height: 118px;
-  overflow: scroll;
+  overflow: auto;
 }
 .story-owner,
 .location,
